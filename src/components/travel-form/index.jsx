@@ -93,6 +93,10 @@ export default function TravelForm() {
     }
 
     try {
+      if (currentUser === null) {
+        Router.push("/signin");
+      }
+
       // Create Firebase Account using the email and password
       const formData = {
         name: passengerName,
@@ -107,7 +111,7 @@ export default function TravelForm() {
         uid: currentUser.uid,
         data: formData
       }
-
+    
       dispatch(registerTravel(trip));
       Router.push("/trip-review");
     } catch (error) {
