@@ -27,18 +27,18 @@ function filterStarships(ships) {
     (ship) => !ship.manufacturer.toLowerCase().includes("military"),
   );
 }
-// BIG O (N^2) loop inside loop
-// Improve to Big O N usign hashMap and hasOwnProperty
+// BIG O(n)
+// Performance improved using hashmap
 export function planetContainsSpecie(planet, specie) {
   let planetHasSpecie = false;
-  planet.residents.some((resident) => {
-    specie.people.some((people) => {
-      if (people === resident) {
-        planetHasSpecie = true;
-        return true;
-      }
-    });
-    return planetHasSpecie;
+  const hashMap = {};
+  planet.residents.map((resident) => (hashMap[resident] = true));
+
+  specie.people.some((people) => {
+    if (hashMap.hasOwnProperty(people)) {
+      planetHasSpecie = true;
+      return true;
+    }
   });
 
   return planetHasSpecie;
