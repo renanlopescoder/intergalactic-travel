@@ -5,11 +5,26 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "prod": "next export"
   },
   "dependencies": {
-    "next": "10.0.2",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.21.0",
+    "firebase": "^7.22.1",
+    "next": "^10.0.2",
+    "next-images": "^1.6.0",
+    "next-redux-wrapper": "^6.0.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-datepicker": "^3.3.0",
+    "react-dom": "17.0.1",
+    "react-redux": "^7.2.0",
+    "react-stripe-checkout": "^2.6.3",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "reselect": "^4.0.0",
+    "sass": "^1.26.12"
   }
 }

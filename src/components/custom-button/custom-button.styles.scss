@@ -1,0 +1,94 @@
+.custom-button {
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: var(--button-primary-background);
+  color: var(--button-primary-color);
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed";
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    display: block;
+    opacity: 0.9;
+  }
+
+  @media screen and (min-width: 800px) {
+    &:hover {
+      background-color: var(--button-primary-background-hover);
+      color: var(--button-primary-color-hover);
+      border: 1px solid black;
+    }
+  }
+
+  &.google-sign-in {
+    background-color: #ffffff;
+    color: #777777;
+    border: 1px solid black;
+
+    @media screen and (min-width: 800px) {
+      &:hover {
+        background-color: black;
+        color: white;
+        border: none;
+      }
+    }
+  }
+
+  &.inverted {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+
+    @media screen and (min-width: 800px) {
+      &:hover {
+        background-color: black;
+        color: white;
+        border: none;
+      }
+    }
+  }
+
+  &.sold-out {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    @media screen and (min-width: 800px) {
+      &:hover {
+        background-color: white;
+        color: red;
+        border: none;
+      }
+    }
+  }
+
+  .spinner-button-container {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(195, 195, 195, 0.6);
+    border-radius: 50%;
+    border-top-color: #636767;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    @keyframes spin {
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    @-webkit-keyframes spin {
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.sign-in {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin: 10px 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    display: inline-table;
+    margin-bottom: 50px;
+  }
+}
+
+.sign-in-form {
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    display: inline-table;
+  }
+
+  .google-icon {
+    max-width: 25px;
+    max-height: 25px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+
+    padding: 0;
+  }
+}

@@ -1,0 +1,16 @@
+%default-imports {
+  // Components
+  @import "../components/custom-button/custom-button.styles.scss";
+  @import "../components/form-input/form-input.styles.scss";
+  @import "../components/header/header.styles.scss";
+  @import "../components/sign-in/sign-in.styles.scss";
+  @import "../components/sign-up/sign-up.styles.scss";
+  @import "../components/card/card.styles.scss";
+  @import "../components/travel-form/travel-form.styles.scss";
+  @import "../components/ticket/ticket.styles.scss";
+
+  // Pages
+  @import "../../pages/history/history.styles.scss";
+  @import "../../pages/signin/signin.styles.scss";
+  @import "../../pages/trip-review/trip-review.styles.scss";
+}
